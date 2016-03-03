@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="htN-YV-fKJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Hoge View Controller-->
+        <scene sceneID="FY6-6b-Rcy">
+            <objects>
+                <viewController storyboardIdentifier="Hoge" id="htN-YV-fKJ" customClass="HogeViewController" customModule="sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LRu-W6-yEr"/>
+                        <viewControllerLayoutGuide type="bottom" id="8a3-wK-kuT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JXK-wU-zNi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.41028167679999999" green="0.79872644010000005" blue="0.33325858400000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oY-df-lQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="314"/>
+        </scene>
+    </scenes>
+</document>
