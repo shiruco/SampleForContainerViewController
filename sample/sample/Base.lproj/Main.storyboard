@@ -20,40 +20,11 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-BE-nid">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NS-Xa-v11">
-                                <rect key="frame" x="360" y="472" width="240" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wS-tE-3Qz">
-                                        <rect key="frame" x="183" y="84" width="37" height="30"/>
-                                        <state key="normal" title="Hoge"/>
-                                        <connections>
-                                            <action selector="onTouchUpInsideHogeBtn:" destination="8sA-CF-so2" eventType="touchUpInside" id="t0Y-2O-HVu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRP-80-OIF">
-                                        <rect key="frame" x="183" y="54" width="34" height="30"/>
-                                        <state key="normal" title="Fuga"/>
-                                        <connections>
-                                            <action selector="onTouchUpInsideFugaBtn:" destination="8sA-CF-so2" eventType="touchUpInside" id="CVd-eF-B0u"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfQ-U3-qnX">
-                                        <rect key="frame" x="183" y="24" width="30" height="30"/>
-                                        <state key="normal" title="Piyo"/>
-                                        <connections>
-                                            <action selector="onTouchUpInsidePiyoBtn:" destination="8sA-CF-so2" eventType="touchUpInside" id="yfo-oe-Y4J"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NS-Xa-v11" customClass="MenuView" customModule="sample" customModuleProvider="target">
+                                <rect key="frame" x="400" y="400" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1wS-tE-3Qz" secondAttribute="bottom" constant="14" id="Jlp-qE-Z5G"/>
-                                    <constraint firstAttribute="trailing" secondItem="1wS-tE-3Qz" secondAttribute="trailing" constant="20" id="X6k-YR-lYw"/>
-                                    <constraint firstItem="VRP-80-OIF" firstAttribute="top" secondItem="PfQ-U3-qnX" secondAttribute="bottom" id="aXx-M1-usA"/>
-                                    <constraint firstAttribute="trailing" secondItem="VRP-80-OIF" secondAttribute="trailing" constant="23" id="cOq-r1-Ca3"/>
-                                    <constraint firstItem="1wS-tE-3Qz" firstAttribute="top" secondItem="VRP-80-OIF" secondAttribute="bottom" id="jBd-1w-gGU"/>
-                                    <constraint firstAttribute="width" constant="240" id="nKd-Oi-tnh"/>
-                                    <constraint firstAttribute="height" constant="128" id="w00-UJ-4fs"/>
-                                    <constraint firstAttribute="trailing" secondItem="PfQ-U3-qnX" secondAttribute="trailing" constant="27" id="ydn-aW-Zrq"/>
+                                    <constraint firstAttribute="width" constant="200" id="nKd-Oi-tnh"/>
+                                    <constraint firstAttribute="height" constant="200" id="w00-UJ-4fs"/>
                                 </constraints>
                             </view>
                         </subviews>

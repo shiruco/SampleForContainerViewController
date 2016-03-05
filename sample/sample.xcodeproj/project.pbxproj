@@ -20,6 +20,7 @@
 		A98C44EF1C888FD400E2B1D3 /* Fuga.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98C44EE1C888FD400E2B1D3 /* Fuga.storyboard */; };
 		A98C44F11C88971B00E2B1D3 /* PiyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C44F01C88971B00E2B1D3 /* PiyoViewController.swift */; };
 		A98C44F31C88974500E2B1D3 /* Piyo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98C44F21C88974500E2B1D3 /* Piyo.storyboard */; };
+		A9F050421C8ACAE9003F36B4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F050411C8ACAE9003F36B4 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A98C44EE1C888FD400E2B1D3 /* Fuga.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fuga.storyboard; sourceTree = "<group>"; };
 		A98C44F01C88971B00E2B1D3 /* PiyoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiyoViewController.swift; sourceTree = "<group>"; };
 		A98C44F21C88974500E2B1D3 /* Piyo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Piyo.storyboard; sourceTree = "<group>"; };
+		A9F050411C8ACAE9003F36B4 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		A98C44E71C85F2D500E2B1D3 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				A9F050411C8ACAE9003F36B4 /* MenuView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98C44E91C8603CA00E2B1D3 /* HogeViewController.swift in Sources */,
+				A9F050421C8ACAE9003F36B4 /* MenuView.swift in Sources */,
 				A98C44ED1C888FA200E2B1D3 /* FugaViewController.swift in Sources */,
 				A98C44B91C85F27A00E2B1D3 /* MainViewController.swift in Sources */,
 				A98C44F11C88971B00E2B1D3 /* PiyoViewController.swift in Sources */,
