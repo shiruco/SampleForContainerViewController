@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol MenuViewDelegate {
+    func onTouchHogeBtn()
+    func onTouchFugaBtn()
+    func onTouchPiyoBtn()
+}
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var menuView: MenuView!
     
     var currentViewController: UIViewController!
     
@@ -24,6 +32,8 @@ class MainViewController: UIViewController {
         self.hogeViewController = HogeViewController.build()
         self.fugaViewController = FugaViewController.build()
         self.piyoViewController = PiyoViewController.build()
+        
+        self.menuView.delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -39,30 +49,6 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func onTouchUpInsideHogeBtn(sender: AnyObject) {
-        if ((currentViewController) != nil) {
-            hideContentViewController(currentViewController)
-        }
-        currentViewController = hogeViewController
-        showContentViewController(hogeViewController)
-    }
-    
-    @IBAction func onTouchUpInsideFugaBtn(sender: AnyObject) {
-        if ((currentViewController) != nil) {
-            hideContentViewController(currentViewController)
-        }
-        currentViewController = fugaViewController
-        showContentViewController(fugaViewController)
-    }
-    
-    @IBAction func onTouchUpInsidePiyoBtn(sender: AnyObject) {
-        if ((currentViewController) != nil) {
-            hideContentViewController(currentViewController)
-        }
-        currentViewController = piyoViewController
-        showContentViewController(piyoViewController)
-    }
     
     func showContentViewController(vc: UIViewController) {
         self.addChildViewController(vc)
@@ -76,5 +62,31 @@ class MainViewController: UIViewController {
         self.removeFromParentViewController()
     }
 
+}
+
+extension MainViewController: MenuViewDelegate {
+    func onTouchHogeBtn() {
+        if ((currentViewController) != nil) {
+            hideContentViewController(currentViewController)
+        }
+        currentViewController = hogeViewController
+        showContentViewController(hogeViewController)
+    }
+    
+    func onTouchFugaBtn() {
+        if ((currentViewController) != nil) {
+            hideContentViewController(currentViewController)
+        }
+        currentViewController = fugaViewController
+        showContentViewController(fugaViewController)
+    }
+    
+    func onTouchPiyoBtn() {
+        if ((currentViewController) != nil) {
+            hideContentViewController(currentViewController)
+        }
+        currentViewController = piyoViewController
+        showContentViewController(piyoViewController)
+    }
 }
 

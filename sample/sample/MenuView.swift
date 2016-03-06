@@ -18,6 +18,12 @@ class MenuView: UIView {
     var menuCloseImageView: UIImageView!
     var menuBackGroundView: UIView!
     
+    var hogeBtn: UIImageView!
+    var fugaBtn: UIImageView!
+    var piyoBtn: UIImageView!
+    
+    var delegate: MenuViewDelegate!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -33,24 +39,44 @@ class MenuView: UIView {
         
         //メニューアイコンを表示
         menuImageView = UIImageView(frame: CGRectMake(0,0,60,60))
-        let menuIconImage = UIImage(named: "menu_icon.png")
-        menuImageView.image = menuIconImage
+        menuImageView.image = UIImage(named: "menu_icon.png")
         menuImageView.layer.position = CGPoint(x: 150, y: 150)
-        let tapMenuImageView = UITapGestureRecognizer(target: self, action: "onTouchMenuImageView:")
-        menuImageView.addGestureRecognizer(tapMenuImageView)
+        menuImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTouchMenuImageView:"))
         menuImageView.userInteractionEnabled = true
         self.addSubview(menuImageView)
         
         //メニュークローズアイコン
         menuCloseImageView = UIImageView(frame: CGRectMake(0,0,60,60))
-        let menuCloseImage = UIImage(named: "close_icon.png")
-        menuCloseImageView.image = menuCloseImage
+        menuCloseImageView.image = UIImage(named: "close_icon.png")
         menuCloseImageView.layer.position = CGPoint(x: 150, y: 150)
-        let tapMenuCloseImageView = UITapGestureRecognizer(target: self, action: "onTouchMenuCloseImageView")
-        self.addGestureRecognizer(tapMenuCloseImageView)
+        menuCloseImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTouchMenuCloseImageView:"))
         menuCloseImageView.userInteractionEnabled = true
         menuCloseImageView.hidden = true
         self.addSubview(menuCloseImageView)
+        
+        //メニューボタン
+        hogeBtn = UIImageView(frame: CGRectMake(0,0,50,50))
+        hogeBtn.image = UIImage(named: "1.png")
+        hogeBtn.layer.position = CGPoint(x: 160, y: 50)
+        hogeBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTouchHogeBtn:"))
+        hogeBtn.userInteractionEnabled = true
+        self.addSubview(hogeBtn)
+        
+        fugaBtn = UIImageView(frame: CGRectMake(0,0,50,50))
+        fugaBtn.image = UIImage(named: "2.png")
+        fugaBtn.layer.position = CGPoint(x: 85, y: 85)
+        fugaBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTouchFugaBtn:"))
+        fugaBtn.userInteractionEnabled = true
+        self.addSubview(fugaBtn)
+        
+        piyoBtn = UIImageView(frame: CGRectMake(0,0,50,50))
+        piyoBtn.image = UIImage(named: "3.png")
+        piyoBtn.layer.position = CGPoint(x: 45, y: 160)
+        piyoBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTouchPiyoBtn:"))
+        piyoBtn.userInteractionEnabled = true
+        self.addSubview(piyoBtn)
+        
+        self.hideMenuBtns()
         
     }
     
@@ -69,14 +95,17 @@ class MenuView: UIView {
             },
             completion: { (finished: Bool) -> Void in
                 self.menuBackGroundView.transform = CGAffineTransformMakeScale(1, 1);
+                self.showMenuBtns()
             }
         )
     }
     
-    func onTouchMenuCloseImageView() {
+    func onTouchMenuCloseImageView(sender:UITapGestureRecognizer) {
     
         menuImageView.hidden = false
         menuCloseImageView.hidden = true
+        
+        self.hideMenuBtns()
         
         UIView.animateWithDuration(
             0.2,
@@ -89,6 +118,30 @@ class MenuView: UIView {
                 self.menuBackGroundView.hidden = true
             }
         )
+    }
+    
+    func onTouchHogeBtn(sender:UITapGestureRecognizer) {
+        delegate.onTouchHogeBtn()
+    }
+    
+    func onTouchFugaBtn(sender:UITapGestureRecognizer) {
+        delegate.onTouchFugaBtn()
+    }
+    
+    func onTouchPiyoBtn(sender:UITapGestureRecognizer) {
+        delegate.onTouchPiyoBtn()
+    }
+    
+    func showMenuBtns() {
+        hogeBtn.hidden = false
+        fugaBtn.hidden = false
+        piyoBtn.hidden = false
+    }
+    
+    func hideMenuBtns() {
+        hogeBtn.hidden = true
+        fugaBtn.hidden = true
+        piyoBtn.hidden = true
     }
     
     /*

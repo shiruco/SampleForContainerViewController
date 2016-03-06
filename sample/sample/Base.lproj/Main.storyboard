@@ -40,6 +40,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="k0Q-BE-nid" id="XbD-1J-zaD"/>
+                        <outlet property="menuView" destination="2NS-Xa-v11" id="qIc-IX-jJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDy-IC-ZkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
